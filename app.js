@@ -1,7 +1,10 @@
 // selectores
-let mouseCursor = document.querySelector('.cursor')
-let navLinks = document.querySelectorAll('.nav-links li')
+const mouseCursor = document.querySelector('.cursor')
+const navLinks = document.querySelectorAll('.nav-links li')
+const title = document.getElementById('title')
+const img = document.querySelector('.front-cover')
 
+console.log(title)
 // event listeners
 window.addEventListener('mousemove', cursor)
 
@@ -10,6 +13,22 @@ function cursor(e) {
     mouseCursor.style.top = e.pageY + 'px'
     mouseCursor.style.left = e.pageX + 'px'
 }
+
+title.addEventListener('mouseleave', () => {
+    //mouseCursor.classList.remove('link-grow')
+    title.classList.remove('hovered-title')
+})
+title.addEventListener('mouseover', () => {
+    //mouseCursor.classList.add('link-grow')
+    title.classList.add('hovered-title')
+})
+
+img.addEventListener('mouseleave', () => {
+    mouseCursor.classList.remove('img-grow')
+})
+img.addEventListener('mouseover', () => {
+    mouseCursor.classList.add('img-grow')
+})
 
 navLinks.forEach(link => {
     link.addEventListener('mouseleave', () => {
