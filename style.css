@@ -21,7 +21,8 @@ nav {
 .nav-links {
     display: flex;
     justify-content: space-between;
-    list-style: none;    
+    list-style: none; 
+    font-size: medium;   
 }
 
 .nav-links li {
@@ -30,6 +31,13 @@ nav {
 
 .nav-links, h1 {
     flex: 1;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
 }
 
 .cursor {
@@ -52,8 +60,20 @@ nav {
     background: black;
 }
 
+.img {
+    max-height: 80vh;
+}
+
+.img-grow {
+    transform: scale(2);    
+}
+
 .hovered-link {
     color: white;
+}
+
+.hovered-title {
+    color: #F995AA;
 }
 
 .front-cover img {
